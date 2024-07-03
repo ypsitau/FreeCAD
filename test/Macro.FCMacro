@@ -1,0 +1,2533 @@
+
+
+# Gui.runCommand('Std_Workbench',14)
+# Gui.runCommand('Std_ViewStatusBar',1)
+# MRU="0"
+# with open('C:/Program Files/FreeCAD 0.21/data/Mod/Start/StartPage/LoadMRU.py') as file:
+# 	exec(file.read())
+# App.setActiveDocument("RoundBase2")
+# App.ActiveDocument=App.getDocument("RoundBase2")
+# Gui.ActiveDocument=Gui.getDocument("RoundBase2")
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Face20',-38.2974,-4.90783,29)
+### Begin command Std_Workbench
+# Gui.activateWorkbench("PartDesignWorkbench")
+### End command Std_Workbench
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Face20',-39.0185,0.00176389,29)
+### Begin command PartDesign_NewSketch
+# Gui.getDocument('RoundBase2').ActiveView.setActiveObject('pdbody',App.getDocument('RoundBase2').getObject('Body'),'')
+App.getDocument('RoundBase2').getObject('Body').newObject('Sketcher::SketchObject','Sketch007')
+App.getDocument('RoundBase2').getObject('Sketch007').Support = (App.getDocument('RoundBase2').getObject('Pocket004'),['Face20',])
+App.getDocument('RoundBase2').getObject('Sketch007').MapMode = 'FlatFace'
+App.ActiveDocument.recompute()
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Sketch007.')
+# import Show
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch007.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+### End command PartDesign_NewSketch
+# Gui.Selection.clearSelection()
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Face1',-31.1974,-24.918,4.76124)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Face3',-33.283,-21.9394,17.5134)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch007.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.runCommand('Std_About',0)
+# Gui.runCommand('Sketcher_External',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Edge21',-39.4106,-6.73654,29)
+App.getDocument('RoundBase2').getObject('Sketch007').addExternal("Pocket004","Edge21")
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Edge57',-37.1949,-6.99963,29)
+App.getDocument('RoundBase2').getObject('Sketch007').addExternal("Pocket004","Edge57")
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_CreateArc',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,0.000000,0),App.Vector(0,0,1),31.273077),1.704871,3.055970),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',0,3,-4,3)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,0.000000,0),App.Vector(0,0,1),31.439666),-3.056346,-1.692086),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',1,3,0,3)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,0.000000,0),App.Vector(0,0,1),32.975010),-1.449962,-0.144745),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',2,3,0,3)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,0.000000,0),App.Vector(0,0,1),33.065614),0.109525,1.487533),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',3,3,0,3)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge1',-21.4443,22.7629,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.ExternalEdge1',-27.8092,28.6492,29.008,False)
+# Gui.runCommand('Sketcher_ConstrainPointOnObject',0)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Equal',0,-3))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge2',-27.2561,-15.6714,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.ExternalEdge1',-31.8231,-24.1612,29.008,False)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Equal',1,-3))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge3',24.8126,-21.7201,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.ExternalEdge1',29.6186,-26.826,29.008,False)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Equal',2,-3))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge4',28.6476,16.5142,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.ExternalEdge1',32.9781,22.5385,29.008,False)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Equal',3,-3))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CompCreateCircle',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0),App.Vector(0,0,1),31.231550),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',4,3,0,3)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge5',31.0197,3.36789,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.ExternalEdge2',37.4314,6.17234,29.008,False)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Equal',4,-4))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_Create3PointArc',0)
+# Gui.runCommand('Sketcher_CreateArc',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,56.319256,0),App.Vector(0,0,1),6.704178),0.080731,3.115665),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('PointOnObject',5,3,-2)) 
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreateLine',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(-6.701925,56.493060,0),App.Vector(-4.187497,39.780207,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',6,1,5,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',6,2,0,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(6.682343,56.859903,0),App.Vector(2.752549,39.905181,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',7,1,5,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',7,2,3,2)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge7',-5.5909,49.1083,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge8',4.72779,48.4272,29.008,False)
+### Begin command Sketcher_ConstrainVertical
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',6))
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',7))
+### End command Sketcher_ConstrainVertical
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex1',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex11',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge6',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex14',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex15',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex16',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex17',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex18',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge7',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex19',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex20',0,0,0,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge8',0,0,0,False)
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_CreateArc',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(0.000000,-48.870346,0),App.Vector(0,0,1),4.349271),-2.994639,-0.149877),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('PointOnObject',8,3,-2)) 
+# Gui.runCommand('Sketcher_CreateLine',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(-4.302393,-49.507189,0),App.Vector(-3.810204,-39.818116,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',9,1,8,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',9,2,1,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(4.300513,-49.519764,0),App.Vector(3.979330,-39.801570,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',10,1,8,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',10,2,2,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',10)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge10',-3.88197,-42.9361,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge11',4.03121,-44.2001,29.008,False)
+# Gui.runCommand('Sketcher_ConstrainVertical',0)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge10',-3.95415,-46.0721,29.008,False)
+### Begin command Sketcher_ConstrainVertical
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',9))
+### End command Sketcher_ConstrainVertical
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreateArc',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(-51.359001,0.000000,0),App.Vector(0,0,1),3.952773),1.505153,4.712389),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('PointOnObject',11,3,-1)) 
+# Gui.runCommand('Sketcher_CreateLine',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(-51.099714,3.944260,0),App.Vector(-39.910191,2.678925,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',12,1,11,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',12,2,0,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(-51.359001,-3.952773,0),App.Vector(-39.910036,-2.681235,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',13,1,11,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',13,2,1,1)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge14',-46.3947,-3.40143,29.008,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',13))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge13',-45.744,3.33862,29.008,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',12))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreateArc',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.ArcOfCircle(Part.Circle(App.Vector(48.664639,0.000000,0),App.Vector(0,0,1),5.080245),-1.394362,1.433521),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('PointOnObject',14,3,-1)) 
+# Gui.runCommand('Sketcher_CreateLine',0)
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(39.836062,3.617754,0),App.Vector(49.359843,5.032453,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',15,1,3,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',15,2,14,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addGeometry(Part.LineSegment(App.Vector(39.715587,-4.761526,0),App.Vector(49.556326,-5.001378,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',16,1,2,2)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Coincident',16,2,14,1)) 
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',16)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge16',44.7878,4.23971,29.008,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',15))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Open
+FreeCAD.openDocument('C:/Users/ypsit/source/FreeCAD/Robot/RoundTable.FCStd')
+# App.setActiveDocument("RoundTable")
+# App.ActiveDocument=App.getDocument("RoundTable")
+# Gui.ActiveDocument=Gui.getDocument("RoundTable")
+### End command Std_Open
+# Gui.Selection.addSelection('RoundTable','Body','Pad002.Sketch008.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Body'), 'Pad002.Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundTable').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pad002.Sketch008.')
+App.getDocument('RoundTable').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Body','Pocket004.Sketch007.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch007')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Body'), 'Pocket004.Sketch007.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch007')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pocket003.Sketch006.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Body','Pocket004.Sketch007.')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch007')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch006')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch006'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch006')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pad001.Sketch003.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch006')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch006')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch003')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch003'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch003')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pocket001.Sketch002.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch003')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch003')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch002'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pocket.Sketch001.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch002')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch001')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch001'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch001')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pocket001.Sketch002.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch001')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch001')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch002'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Pad.Sketch.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch002')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch002')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundTable','Body','Fillet.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Body','Pad003.Sketch009.')
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundTable','Sketch')
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch009')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundTable').getObject('Sketch009'), ''))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch009')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundTable').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundTable').getObject('Sketch009')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundTable','Sketch009')
+App.getDocument('RoundTable').recompute()
+# Gui.Selection.clearSelection()
+# App.setActiveDocument("RoundBase2")
+# App.ActiveDocument=App.getDocument("RoundBase2")
+# Gui.ActiveDocument=Gui.getDocument("RoundBase2")
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch007.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex36',49.36,4.81398,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex35',49.5563,-4.7815,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',14,2,14,1,9.597486))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(38,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex22',4.03121,-49.5198,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex21',-4.03322,-49.5072,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',8,2,8,1,8.064439))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(39,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex29',-51.359,-2.7497,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex28',-51.0996,2.73744,29.013,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex29',-51.359,-2.7497,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex28',-51.0996,2.73744,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',11,2,11,1,5.493264))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(40,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex11',6.68006,39.4383,29.013,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex14',6.68006,56.8599,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex15',-6.69965,56.4931,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',5,1,5,2,13.384740))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(41,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex29',-51.3626,-4.50187,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex4',-39.7459,-4.50187,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',11,2,1,1,11.616788))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(42,App.Units.Quantity('6.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex29',-45.9624,-1.73326,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex28',-51.096,5.65907,29.013,False)
+### Begin command Sketcher_ConstrainVertical
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',11,2,11,1))
+### End command Sketcher_ConstrainVertical
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex30',-51.485,-9.58855e-23,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge12',-57.0936,-4.66156,29.008,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge12',-55.4846,-6.09818,29.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Diameter',11,14.585712))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(44,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge9',-3.26588,-52.0322,29.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Diameter',8,9.091455))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(45,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge15',52.1461,-2.95952,29.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Diameter',14,9.138959))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(46,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Edge6',3.0282,59.6671,29.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Diameter',5,9.028359))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(47,App.Units.Quantity('9.000000 mm'))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex7',4.5,-39.7461,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex22',4.5,-49.5199,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',2,1,8,2,9.773816))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(48,App.Units.Quantity('6.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex22',4.16605,-45.7825,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex21',-4.16607,-49.1848,29.013,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',8,2,8,1))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex35',49.5547,-4.49896,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex36',49.3613,4.49896,29.013,False)
+### Begin command Sketcher_ConstrainVertical
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Vertical',14,1,14,2))
+### End command Sketcher_ConstrainVertical
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex15',-4.49635,56.4953,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex14',4.49635,56.8577,29.013,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Horizontal',5,2,5,1))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex15',-4.5,56.609,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex1',-4.5,39.7461,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',5,2,0,1,16.862942))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(52,App.Units.Quantity('6.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Constraint32',39.738,4.89118,29.018,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex36',49.5782,4.5,29.013,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex10',39.7461,4.5,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.Vertex36',49.5782,4.5,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch007').addConstraint(Sketcher.Constraint('Distance',3,1,14,2,9.832127))
+App.getDocument('RoundBase2').getObject('Sketch007').setDatum(53,App.Units.Quantity('6.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch007.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch007')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch007.')
+App.getDocument('RoundBase2').recompute()
+### Begin command PartDesign_Pad
+App.getDocument('RoundBase2').getObject('Body').newObject('PartDesign::Pad','Pad002')
+App.getDocument('RoundBase2').getObject('Pad002').Profile = App.getDocument('RoundBase2').getObject('Sketch007')
+App.getDocument('RoundBase2').getObject('Pad002').Length = 10
+App.ActiveDocument.recompute()
+App.getDocument('RoundBase2').getObject('Pad002').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch007'),['N_Axis'])
+App.getDocument('RoundBase2').getObject('Sketch007').Visibility = False
+App.ActiveDocument.recompute()
+# App.getDocument('RoundBase2').getObject('Pad002').ViewObject.ShapeColor=getattr(App.getDocument('RoundBase2').getObject('Pocket004').getLinkedObject(True).ViewObject,'ShapeColor',App.getDocument('RoundBase2').getObject('Pad002').ViewObject.ShapeColor)
+# App.getDocument('RoundBase2').getObject('Pad002').ViewObject.LineColor=getattr(App.getDocument('RoundBase2').getObject('Pocket004').getLinkedObject(True).ViewObject,'LineColor',App.getDocument('RoundBase2').getObject('Pad002').ViewObject.LineColor)
+# App.getDocument('RoundBase2').getObject('Pad002').ViewObject.PointColor=getattr(App.getDocument('RoundBase2').getObject('Pocket004').getLinkedObject(True).ViewObject,'PointColor',App.getDocument('RoundBase2').getObject('Pad002').ViewObject.PointColor)
+# App.getDocument('RoundBase2').getObject('Pad002').ViewObject.Transparency=getattr(App.getDocument('RoundBase2').getObject('Pocket004').getLinkedObject(True).ViewObject,'Transparency',App.getDocument('RoundBase2').getObject('Pad002').ViewObject.Transparency)
+# App.getDocument('RoundBase2').getObject('Pad002').ViewObject.DisplayMode=getattr(App.getDocument('RoundBase2').getObject('Pocket004').getLinkedObject(True).ViewObject,'DisplayMode',App.getDocument('RoundBase2').getObject('Pad002').ViewObject.DisplayMode)
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Pad002.')
+# Gui.Selection.clearSelection()
+### End command PartDesign_Pad
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Pad002').Length = 3.000000
+App.getDocument('RoundBase2').getObject('Pad002').TaperAngle = 0.000000
+App.getDocument('RoundBase2').getObject('Pad002').UseCustomVector = 0
+App.getDocument('RoundBase2').getObject('Pad002').Direction = (0, 0, 1)
+App.getDocument('RoundBase2').getObject('Pad002').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch007'), ['N_Axis'])
+App.getDocument('RoundBase2').getObject('Pad002').AlongSketchNormal = 1
+App.getDocument('RoundBase2').getObject('Pad002').Type = 0
+App.getDocument('RoundBase2').getObject('Pad002').UpToFace = None
+App.getDocument('RoundBase2').getObject('Pad002').Reversed = 0
+App.getDocument('RoundBase2').getObject('Pad002').Midplane = 0
+App.getDocument('RoundBase2').getObject('Pad002').Offset = 0
+App.getDocument('RoundBase2').recompute()
+App.getDocument('RoundBase2').getObject('Pocket004').Visibility = False
+# Gui.getDocument('RoundBase2').resetEdit()
+App.getDocument('RoundBase2').getObject('Sketch007').Visibility = False
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Edge127',-10.8817,36.2844,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Edge108',-4.5,-43.8428,32)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Edge102',4.5,-43.8428,32)
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Edge130',-16.7356,18.5424,9)
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Distance','',-6.52207,14.0988,21.4349)
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance001','',-17.4789,24.1552,21.8428)
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance001')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Pad001.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad001.Sketch001.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch001')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pad001.Sketch001.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch001')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch001')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pad001.Sketch001.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad001.')
+FreeCAD.getDocument('RoundBase2').getObject('Pad001').Length = '120 mm'
+
+FreeCAD.getDocument('RoundBase2').getObject('Pad001').Length = '1720 mm'
+
+FreeCAD.getDocument('RoundBase2').getObject('Pad001').Length = '170 mm'
+
+FreeCAD.getDocument('RoundBase2').getObject('Pad001').Length = '17 mm'
+
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body')
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Face47',-44.9422,-0.107186,29)
+### Begin command PartDesign_NewSketch
+App.getDocument('RoundBase2').getObject('Body').newObject('Sketcher::SketchObject','Sketch008')
+App.getDocument('RoundBase2').getObject('Sketch008').Support = (App.getDocument('RoundBase2').getObject('Pad002'),['Face47',])
+App.getDocument('RoundBase2').getObject('Sketch008').MapMode = 'FlatFace'
+App.ActiveDocument.recompute()
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Sketch008.')
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+### End command PartDesign_NewSketch
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_CreateSlot',0)
+geoList = []
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(-47.218929, 0.945814, 0), App.Vector(0, 0, 1), 1.849856), 1.570796, 4.712389))
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(-39.819504, 0.945814 ,0), App.Vector(0, 0, 1), 1.849856), 4.712389, 7.853982))
+geoList.append(Part.LineSegment(App.Vector(-47.218929, -0.904043, 0), App.Vector(-39.819504, -0.904043, 0)))
+geoList.append(Part.LineSegment(App.Vector(-39.819504, 2.795670, 0), App.Vector(-47.218929, 2.795670, 0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(geoList, False)
+conList = []
+conList.append(Sketcher.Constraint('Tangent', 0, 2, 2, 1))
+conList.append(Sketcher.Constraint('Tangent', 2, 2, 1, 1))
+conList.append(Sketcher.Constraint('Tangent', 1, 2, 3, 1))
+conList.append(Sketcher.Constraint('Tangent', 3, 2, 0, 1))
+conList.append(Sketcher.Constraint('Equal', 0, 1))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(conList)
+del geoList, conList
+
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Horizontal',2)) 
+geoList = []
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(39.866676, 1.657295, 0), App.Vector(0, 0, 1), 1.814282), 1.570796, 4.712389))
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(47.123806, 1.372702 ,0), App.Vector(0, 0, 1), 1.814282), 4.712389, 7.853982))
+geoList.append(Part.LineSegment(App.Vector(39.795583, -0.155594, 0), App.Vector(47.052713, -0.440187, 0)))
+geoList.append(Part.LineSegment(App.Vector(47.194899, 3.185591, 0), App.Vector(39.937770, 3.470184, 0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(geoList, False)
+conList = []
+conList.append(Sketcher.Constraint('Tangent', 4, 2, 6, 1))
+conList.append(Sketcher.Constraint('Tangent', 6, 2, 5, 1))
+conList.append(Sketcher.Constraint('Tangent', 5, 2, 7, 1))
+conList.append(Sketcher.Constraint('Tangent', 7, 2, 4, 1))
+conList.append(Sketcher.Constraint('Equal', 4, 5))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(conList)
+del geoList, conList
+
+geoList = []
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(-2.680054, -40.177948, 0), App.Vector(0, 0, 1), 1.849857), 0.000000, -3.141593))
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(-2.537758, -47.577377 ,0), App.Vector(0, 0, 1), 1.849857), -3.141593, 0.000000))
+geoList.append(Part.LineSegment(App.Vector(-4.529570, -40.213516, 0), App.Vector(-4.387273, -47.612945, 0)))
+geoList.append(Part.LineSegment(App.Vector(-0.688243, -47.541810, 0), App.Vector(-0.830539, -40.142380, 0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(geoList, False)
+conList = []
+conList.append(Sketcher.Constraint('Tangent', 8, 2, 10, 1))
+conList.append(Sketcher.Constraint('Tangent', 10, 2, 9, 1))
+conList.append(Sketcher.Constraint('Tangent', 9, 2, 11, 1))
+conList.append(Sketcher.Constraint('Tangent', 11, 2, 8, 1))
+conList.append(Sketcher.Constraint('Equal', 8, 9))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(conList)
+del geoList, conList
+
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Vertical',10)) 
+geoList = []
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(1.589549, 46.386398, 0), App.Vector(0, 0, 1), 1.956582), 0.000000, -3.141593))
+geoList.append(Part.ArcOfCircle(Part.Circle(App.Vector(2.158731, 38.560070 ,0), App.Vector(0, 0, 1), 1.956582), -3.141593, 0.000000))
+geoList.append(Part.LineSegment(App.Vector(-0.361879, 46.244478, 0), App.Vector(0.207303, 38.418149, 0)))
+geoList.append(Part.LineSegment(App.Vector(4.110159, 38.701991, 0), App.Vector(3.540977, 46.528319, 0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(geoList, False)
+conList = []
+conList.append(Sketcher.Constraint('Tangent', 12, 2, 14, 1))
+conList.append(Sketcher.Constraint('Tangent', 14, 2, 13, 1))
+conList.append(Sketcher.Constraint('Tangent', 13, 2, 15, 1))
+conList.append(Sketcher.Constraint('Tangent', 15, 2, 12, 1))
+conList.append(Sketcher.Constraint('Equal', 12, 13))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(conList)
+del geoList, conList
+
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(12,3,App.Vector(3.439403,47.097878,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex33',3.4394,47.0979,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.V_Axis',0,47.2402,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',12,3,-2))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex36',0.671608,38.5491,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.V_Axis',0,35.9987,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',13,3,-2))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex3',-47.2189,0.945813,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Edge1',-48.9389,0.264836,29.008,False)
+# Gui.runCommand('Sketcher_ConstrainPointOnObject',0)
+App.ActiveDocument.recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.')
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.runCommand('Std_Undo',0)
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex3',-47.2189,0.945813,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.H_Axis',-46.9034,0,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',0,3,-1))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex6',-39.8214,-2.80881e-17,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.H_Axis',-40.7978,0,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',1,3,-1))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').delConstraint(25)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex26',-2.6436,-47.5757,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.V_Axis',0,-47.59,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',9,3,-2))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex16',47.1237,1.3734,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.H_Axis',52.7731,0,29.002,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',5,3,-1))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex16',47.7748,9.50994e-22,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex13',39.215,2.41875,29.013,False)
+### Begin command Sketcher_ConstrainHorizontal
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Horizontal',5,3,4,3))
+### End command Sketcher_ConstrainHorizontal
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_External',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pad002.Edge111',37.2742,7.36876,29)
+App.getDocument('RoundBase2').getObject('Sketch008').addExternal("Pad002","Edge111")
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.ExternalEdge1',37.7912,-3.3188,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex16',46.9914,-3.23493e-23,29.013,False)
+# Gui.runCommand('Sketcher_ConstrainDistance',0)
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreateLine',0)
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.LineSegment(App.Vector(58.733810,41.015194,0),App.Vector(58.733810,-41.177086,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Vertical',16)) 
+# Gui.runCommand('Sketcher_ConstrainDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex41',58.7338,41.0152,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex42',58.7338,-41.1771,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',16,1,16,2,82.192280))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(29,App.Units.Quantity('90.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(16,0,App.Vector(-58.510397,-1.698257,0),1)
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(12,3,App.Vector(-0.467509,45.071560,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex32',-3.54014,45.0716,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex31',3.54014,45.0716,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',12,2,12,1,7.080273))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(30,App.Units.Quantity('3.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint31',-0.389415,48.1172,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(30,App.Units.Quantity('3.200000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex15',46.9914,2.35811,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex14',46.9914,-2.35811,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',5,2,5,1,4.716219))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(31,App.Units.Quantity('3.200000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex24',-1.36393,-47.5672,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex25',1.36393,-47.5672,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',9,1,9,2,2.727867))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(32,App.Units.Quantity('3.200000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex2',-47.2172,-1.05379,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex1',-47.2172,1.05379,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',0,2,0,1,2.107573))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(33,App.Units.Quantity('3.200000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(12,1,App.Vector(1.938363,46.925354,0),0)
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(13,3,App.Vector(0.472618,41.324108,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex33',0,46.9252,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex36',0,41.3241,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',12,3,13,3,5.601058))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(34,App.Units.Quantity('6.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint35',2.4095,43.1563,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(34,App.Units.Quantity('5.500000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint35',2.61889,43.3657,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(34,App.Units.Quantity('5.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex11',39.9756,1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex15',46.9813,1.6,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',4,1,5,2,7.005749))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(35,App.Units.Quantity('5.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex23',8.54789e-17,-40.2139,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex26',0,-47.5646,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',8,3,9,3,7.350743))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(36,App.Units.Quantity('5.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex6',-39.8214,-3.90847e-18,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex3',-47.2156,0,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',1,3,0,3,7.394164))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(37,App.Units.Quantity('5.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreatePoint',0)
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(-43.162937,0.000000,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',17,1,-1)) 
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').delGeometries([17])
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(0.223413,-34.853001,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',17,1,16)) 
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(-18.339987,-44.013916,0)))
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').delGeometries([17])
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').delGeometries([17])
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Edge17',0.223413,-36.2141,29.008,False)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').delGeometries([16])
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Sketcher_CreatePoint',0)
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(-43.069759,0.000000,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',16,1,-1)) 
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(0.000000,-45.504822,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',17,1,-2)) 
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(43.990524,0.000000,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',18,1,-1)) 
+App.getDocument('RoundBase2').getObject('Sketch008').addGeometry(Part.Point(App.Vector(0.000000,44.042912,0)))
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('PointOnObject',19,1,-2)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex32',-1.6,46.9488,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex35',1.6,41.9488,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex44',0,44.0429,29.013,False)
+### Begin command Sketcher_ConstrainSymmetric
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Symmetric',12,2,13,2,19,1))
+### End command Sketcher_ConstrainSymmetric
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint28',41.7331,-1.63108,29.018,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex15',46.7717,1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex43',43.9905,0,29.013,False)
+# Gui.runCommand('Sketcher_ConstrainParallel',0)
+# Gui.runCommand('Sketcher_ConstrainSymmetric',0)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint28',41.6808,-1.52639,29.018,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex15',46.7717,1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex43',43.9905,0,29.013,False)
+# Gui.runCommand('Sketcher_ConstrainSymmetric',0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(18,1,App.Vector(44.245853,-0.479427,0),0)
+App.getDocument('RoundBase2').getObject('Sketch008').movePoint(19,1,App.Vector(0.000000,44.057388,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex12',41.7717,-1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex15',46.7717,1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex43',44.2459,0,29.013,False)
+### Begin command Sketcher_ConstrainSymmetric
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Symmetric',4,2,5,2,18,1))
+### End command Sketcher_ConstrainSymmetric
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex22',-1.6,-42.3619,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex25',1.6,-47.3619,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex42',0,-45.5048,29.013,False)
+### Begin command Sketcher_ConstrainSymmetric
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Symmetric',8,2,9,2,17,1))
+### End command Sketcher_ConstrainSymmetric
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex2',-45.0222,-1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex5',-40.0222,1.6,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex41',-43.0698,0,29.013,False)
+### Begin command Sketcher_ConstrainSymmetric
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Symmetric',0,2,1,2,16,1))
+### End command Sketcher_ConstrainSymmetric
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex41',-42.531,1.7718e-14,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex45',-4.10561e-32,7.00677e-32,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',16,1,-3,3,42.530993))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('45.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint41',-23.18,2.17512,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('42.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint41',-21.5049,2.33216,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex44',5.28927e-16,44.0574,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex45',-4.10561e-32,7.00677e-32,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',19,1,-3,3,44.057388))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(41,App.Units.Quantity('44.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex45',-4.10561e-32,7.00677e-32,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex43',44.2717,-5.24334e-17,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',-3,3,18,1,44.271684))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(42,App.Units.Quantity('44.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex45',-4.10561e-32,7.00677e-32,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Vertex42',7.59187e-13,-45.0051,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch008').addConstraint(Sketcher.Constraint('Distance',-3,3,17,1,45.005091))
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(43,App.Units.Quantity('44.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+### Begin command Sketcher_ToggleConstruction
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(16) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(17) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(18) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(19) 
+### End command Sketcher_ToggleConstruction
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+### Begin command Sketcher_ToggleConstruction
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(16) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(17) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(18) 
+App.getDocument('RoundBase2').getObject('Sketch008').toggleConstruction(19) 
+### End command Sketcher_ToggleConstruction
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.')
+App.getDocument('RoundBase2').recompute()
+### Begin command PartDesign_Pocket
+App.getDocument('RoundBase2').getObject('Body').newObject('PartDesign::Pocket','Pocket005')
+App.getDocument('RoundBase2').getObject('Pocket005').Profile = App.getDocument('RoundBase2').getObject('Sketch008')
+App.getDocument('RoundBase2').getObject('Pocket005').Length = 5
+App.ActiveDocument.recompute()
+App.getDocument('RoundBase2').getObject('Pocket005').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch008'),['N_Axis'])
+App.getDocument('RoundBase2').getObject('Sketch008').Visibility = False
+App.ActiveDocument.recompute()
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.ShapeColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'ShapeColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.ShapeColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.LineColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'LineColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.LineColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.PointColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'PointColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.PointColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.Transparency=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'Transparency',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.Transparency)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.DisplayMode=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'DisplayMode',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.DisplayMode)
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Pocket005.')
+# Gui.Selection.clearSelection()
+### End command PartDesign_Pocket
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint41',-21.3385,1.80589,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint41',-21.9076,2.09049,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('44.500000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint44',5.84023,-24.3767,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(43,App.Units.Quantity('44.500000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint43',20.6391,4.79413,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(42,App.Units.Quantity('44.500000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint42',4.98645,20.0199,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(41,App.Units.Quantity('44.500000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint36',-44.5479,-2.36546,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(35,App.Units.Quantity('4.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint41',-21.8798,2.33659,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(40,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint42',4.08983,18.826,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(41,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint43',21.7092,3.54166,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(42,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint44',5.36352,-26.1778,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(43,App.Units.Quantity('44.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint35',2.36066,-44.5877,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(34,App.Units.Quantity('4.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint34',43.5899,7.33294,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(33,App.Units.Quantity('4.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.Constraint33',2.26655,43.6056,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch008').setDatum(32,App.Units.Quantity('4.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch008.')
+App.getDocument('RoundBase2').recompute()
+### Begin command PartDesign_Pocket
+App.getDocument('RoundBase2').getObject('Body').newObject('PartDesign::Pocket','Pocket005')
+App.getDocument('RoundBase2').getObject('Pocket005').Profile = App.getDocument('RoundBase2').getObject('Sketch008')
+App.getDocument('RoundBase2').getObject('Pocket005').Length = 5
+App.ActiveDocument.recompute()
+App.getDocument('RoundBase2').getObject('Pocket005').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch008'),['N_Axis'])
+App.getDocument('RoundBase2').getObject('Sketch008').Visibility = False
+App.ActiveDocument.recompute()
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.ShapeColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'ShapeColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.ShapeColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.LineColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'LineColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.LineColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.PointColor=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'PointColor',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.PointColor)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.Transparency=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'Transparency',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.Transparency)
+# App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.DisplayMode=getattr(App.getDocument('RoundBase2').getObject('Pad002').getLinkedObject(True).ViewObject,'DisplayMode',App.getDocument('RoundBase2').getObject('Pocket005').ViewObject.DisplayMode)
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Pocket005.')
+# Gui.Selection.clearSelection()
+### End command PartDesign_Pocket
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+App.getDocument('RoundBase2').getObject('Pocket005').UseCustomVector = 0
+App.getDocument('RoundBase2').getObject('Pocket005').Direction = (0, 0, -1)
+App.getDocument('RoundBase2').getObject('Pocket005').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch008'), ['N_Axis'])
+App.getDocument('RoundBase2').getObject('Pocket005').AlongSketchNormal = 1
+App.getDocument('RoundBase2').getObject('Pocket005').Type = 1
+App.getDocument('RoundBase2').getObject('Pocket005').UpToFace = None
+App.getDocument('RoundBase2').getObject('Pocket005').Reversed = 0
+App.getDocument('RoundBase2').getObject('Pocket005').Midplane = 0
+App.getDocument('RoundBase2').getObject('Pocket005').Offset = 0
+App.getDocument('RoundBase2').recompute()
+App.getDocument('RoundBase2').getObject('Pad002').Visibility = False
+# Gui.getDocument('RoundBase2').resetEdit()
+App.getDocument('RoundBase2').getObject('Sketch008').Visibility = False
+# Gui.runCommand('PartDesign_NewSketch',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.Face51',-35.9048,16.0148,29)
+### Begin command PartDesign_NewSketch
+App.getDocument('RoundBase2').getObject('Body').newObject('Sketcher::SketchObject','Sketch009')
+App.getDocument('RoundBase2').getObject('Sketch009').Support = (App.getDocument('RoundBase2').getObject('Pocket005'),['Face51',])
+App.getDocument('RoundBase2').getObject('Sketch009').MapMode = 'FlatFace'
+App.ActiveDocument.recompute()
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Sketch009.')
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch009')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Sketch009.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch009')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+### End command PartDesign_NewSketch
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_External',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.Edge94',-36.9915,14.7526,29)
+App.getDocument('RoundBase2').getObject('Sketch009').addExternal("Pocket005","Edge94")
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.Edge143',-35.1074,14.542,29)
+App.getDocument('RoundBase2').getObject('Sketch009').addExternal("Pocket005","Edge143")
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_CreatePolyline',0)
+App.getDocument('RoundBase2').getObject('Sketch009').addGeometry(Part.LineSegment(App.Vector(-37.283623,18.650862,0),App.Vector(-39.713268,11.553740,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch009').addGeometry(Part.LineSegment(App.Vector(-39.713268,11.553740,0),App.Vector(-34.278534,9.251968,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',0,2,1,1)) 
+App.getDocument('RoundBase2').getObject('Sketch009').addGeometry(Part.LineSegment(App.Vector(-34.278534,9.251968,0),App.Vector(-31.529198,16.668783,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',1,2,2,1)) 
+App.getDocument('RoundBase2').getObject('Sketch009').addGeometry(Part.LineSegment(App.Vector(-31.529198,16.668783,0),App.Vector(-37.283623,18.650862,0)),False)
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',2,2,3,1)) 
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',3,2,0,1)) 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex2',-39.7133,11.5537,29.013,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge1',-38.3308,15.5919,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-32.9702,12.7813,29.008,False)
+### Begin command Sketcher_ConstrainParallel
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Parallel',0,2))
+### End command Sketcher_ConstrainParallel
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-35.5229,9.78089,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-32.5812,17.0326,29.008,False)
+### Begin command Sketcher_ConstrainParallel
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Parallel',1,3))
+### End command Sketcher_ConstrainParallel
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,0,App.Vector(-1.453960,0.354726,0),1)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-36.709,18.3928,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge1',-36.1578,17.0999,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',-3,3))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-39.0552,11.7195,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge1',-38.8983,9.30758,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',-3,1))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_Undo',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-39.4889,11.9375,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge1',-38.6214,10.3973,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',-3,1))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_Undo',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex2',-41.2235,12.8092,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex1',-38.4751,19.3351,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Distance',0,2,0,1,7.081028))
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(7,App.Units.Quantity('7.080000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-36.9435,18.5643,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-39.2593,11.8222,29.008,False)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,2,App.Vector(-34.278534,6.374756,0),0)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,2,App.Vector(-33.767029,7.653518,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge1',-40.8733,13.9525,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-32.5241,11.0491,29.008,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(4)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(4)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-39.9095,10.4572,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge1',-39.0327,8.7434,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',-3,1))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-32.3075,12.006,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge1',-40.9022,14.1903,29.008,False)
+### Begin command Sketcher_ConstrainParallel
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Parallel',2,0))
+### End command Sketcher_ConstrainParallel
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-40.800217,15.901525,0),0)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,2,App.Vector(-42.654419,8.996217,0),0)
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(6)
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(4)
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-39.9318,8.42199,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-38.4644,14.9293,29.008,False)
+### Begin command Sketcher_ConstrainParallel
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Parallel',1,3))
+### End command Sketcher_ConstrainParallel
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-40.736275,15.773650,0),0)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-40.928093,16.221218,0),0)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,2,App.Vector(-34.150658,7.142014,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-40.138,8.70032,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge1',-39.3211,7.32063,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',-3,1))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,0,App.Vector(-0.072627,-0.551128,0),1)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(7)
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-36.6362,7.50094,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-34.069,14.1977,29.008,False)
+### Begin command Sketcher_ConstrainEqual
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Equal',1,3))
+### End command Sketcher_ConstrainEqual
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,2,App.Vector(-34.662163,4.904181,0),0)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-39.137825,14.622765,0),0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(1)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(0)
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(1)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(1)
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge1',-39.5937,13.638,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-38.3036,14.2458,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',3,0))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-33.2113,9.73824,29.008,False)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-40.736275,14.878518,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex1',-40.7363,14.8785,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex8',-39.3355,14.1487,29.013,False)
+### Begin command Sketcher_ConstrainCoincident
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',0,1,3,2))
+### End command Sketcher_ConstrainCoincident
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex2',-42.7008,7.81886,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex3',-42.1121,8.19781,29.013,False)
+### Begin command Sketcher_ConstrainCoincident
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',0,2,1,1))
+### End command Sketcher_ConstrainCoincident
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(1,2,App.Vector(-36.324551,3.561482,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-36.3246,3.56148,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex5',-35.3408,5.13813,29.013,False)
+### Begin command Sketcher_ConstrainCoincident
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',1,2,2,1))
+### End command Sketcher_ConstrainCoincident
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex6',-32.3665,11.5631,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex7',-32.1702,12.0329,29.013,False)
+### Begin command Sketcher_ConstrainCoincident
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Coincident',2,2,3,1))
+### End command Sketcher_ConstrainCoincident
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge4',-33.7895,12.5222,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-33.1266,10.0826,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',2,3))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-38.6307,5.06081,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge3',-35.2605,6.4662,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',2,1))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge1',-42.3312,9.97026,29.008,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Edge2',-42.1298,7.49686,29.008,False)
+### Begin command Sketcher_ConstrainPerpendicular
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Perpendicular',1,0))
+### End command Sketcher_ConstrainPerpendicular
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(3,0,App.Vector(2.520426,8.468122,0),1)
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,1,App.Vector(-37.411499,21.847765,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.9487,13.1437,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex9',-4.10561e-32,7.00677e-32,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Distance',1,2,-4,3,36.404255))
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(8,App.Units.Quantity('35.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex6',-31.6009,19.7305,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex9',-4.10561e-32,7.00677e-32,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Distance',2,2,-4,3,37.254615))
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(9,App.Units.Quantity('35.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,2,App.Vector(-41.119904,11.425864,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex2',-41.1199,11.4259,29.011,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.8879,8.75257,29.013,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('Distance',0,2,1,2,7.710240))
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(10,App.Units.Quantity('8.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+App.getDocument('RoundBase2').getObject('Sketch009').movePoint(0,2,App.Vector(-45.659504,14.942456,0),0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.4631,10.2576,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.H_Axis',-34.3643,0,29.002,False)
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_ConstrainAngle',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.4631,10.2576,0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.H_Axis',-33.1147,0,0)
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_ConstrainAngle',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.4631,10.2576,0)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.H_Axis',-30.4595,0,0)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Constraint9',-18.1207,2.95812,29.009,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(8)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delConstraint(8)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-33.4631,10.2576,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge2',-36.8062,9.45022,29.008,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('PointOnObject',1,2,-4))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex6',-31.8418,16.7699,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.ExternalEdge2',-32.9381,18.8763,29.008,False)
+### Begin command Sketcher_ConstrainPointOnObject
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('PointOnObject',2,2,-4))
+### End command Sketcher_ConstrainPointOnObject
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Constraint9',-38.8212,15.7282,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(8,App.Units.Quantity('4.000000 mm'))
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Constraint9',-36.9235,14.9537,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(8,App.Units.Quantity('3.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex4',-36.1935,11.5771,29.013,False)
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.H_Axis',-36.6769,0,29.002,False)
+### Begin command Sketcher_ConstrainDistance
+App.getDocument('RoundBase2').getObject('Sketch009').addConstraint(Sketcher.Constraint('DistanceY',-1,1,1,2,11.577115))
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(11,App.Units.Quantity('12.000000 mm'))
+### End command Sketcher_ConstrainDistance
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Constraint1',-43.9164,19.4113,29.009,False)
+App.getDocument('RoundBase2').getObject('Sketch009').setDatum(0,App.Units.Quantity('5.000000 mm'))
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.Vertex11',-39.7461,4.5,29.013,False)
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch009').delExternal(0)
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch009')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Sketch009.')
+App.getDocument('RoundBase2').recompute()
+### Begin command PartDesign_Pocket
+App.getDocument('RoundBase2').getObject('Body').newObject('PartDesign::Pocket','Pocket006')
+App.getDocument('RoundBase2').getObject('Pocket006').Profile = App.getDocument('RoundBase2').getObject('Sketch009')
+App.getDocument('RoundBase2').getObject('Pocket006').Length = 5
+App.ActiveDocument.recompute()
+App.getDocument('RoundBase2').getObject('Pocket006').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch009'),['N_Axis'])
+App.getDocument('RoundBase2').getObject('Sketch009').Visibility = False
+App.ActiveDocument.recompute()
+# App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.ShapeColor=getattr(App.getDocument('RoundBase2').getObject('Pocket005').getLinkedObject(True).ViewObject,'ShapeColor',App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.ShapeColor)
+# App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.LineColor=getattr(App.getDocument('RoundBase2').getObject('Pocket005').getLinkedObject(True).ViewObject,'LineColor',App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.LineColor)
+# App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.PointColor=getattr(App.getDocument('RoundBase2').getObject('Pocket005').getLinkedObject(True).ViewObject,'PointColor',App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.PointColor)
+# App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.Transparency=getattr(App.getDocument('RoundBase2').getObject('Pocket005').getLinkedObject(True).ViewObject,'Transparency',App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.Transparency)
+# App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.DisplayMode=getattr(App.getDocument('RoundBase2').getObject('Pocket005').getLinkedObject(True).ViewObject,'DisplayMode',App.getDocument('RoundBase2').getObject('Pocket006').ViewObject.DisplayMode)
+# Gui.getDocument('RoundBase2').setEdit(App.getDocument('RoundBase2').getObject('Body'), 0, 'Pocket006.')
+# Gui.Selection.clearSelection()
+### End command PartDesign_Pocket
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Pocket006').Length = 5.000000
+App.getDocument('RoundBase2').getObject('Pocket006').TaperAngle = 0.000000
+App.getDocument('RoundBase2').getObject('Pocket006').UseCustomVector = 0
+App.getDocument('RoundBase2').getObject('Pocket006').Direction = (0, 0, -1)
+App.getDocument('RoundBase2').getObject('Pocket006').ReferenceAxis = (App.getDocument('RoundBase2').getObject('Sketch009'), ['N_Axis'])
+App.getDocument('RoundBase2').getObject('Pocket006').AlongSketchNormal = 1
+App.getDocument('RoundBase2').getObject('Pocket006').Type = 0
+App.getDocument('RoundBase2').getObject('Pocket006').UpToFace = None
+App.getDocument('RoundBase2').getObject('Pocket006').Reversed = 0
+App.getDocument('RoundBase2').getObject('Pocket006').Midplane = 0
+App.getDocument('RoundBase2').getObject('Pocket006').Offset = 0
+App.getDocument('RoundBase2').recompute()
+App.getDocument('RoundBase2').getObject('Pocket005').Visibility = False
+# Gui.getDocument('RoundBase2').resetEdit()
+App.getDocument('RoundBase2').getObject('Sketch009').Visibility = False
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket004.Sketch006.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.clearSelection()
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch006').setDatum(59,App.Units.Quantity('7.000000 mm'))
+# Gui.Selection.addSelection('RoundBase2','Sketch006','Constraint60')
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket004.Sketch006.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+App.getDocument('RoundBase2').getObject('Sketch006').setDatum(59,App.Units.Quantity('6.500000 mm'))
+# Gui.Selection.addSelection('RoundBase2','Sketch006','Constraint60')
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket004.Sketch006.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.Edge25',-26.5072,-13.9958,-0.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch006').addConstraint(Sketcher.Constraint('Diameter',24,6.500000))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.Edge24',-31.2586,2.74407,-0.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('RoundBase2').getObject('Sketch006').addConstraint(Sketcher.Constraint('Diameter',23,6.500000))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').getObject('Sketch006').setDatum(59,App.Units.Quantity('20.000000 mm'))
+# Gui.Selection.addSelection('RoundBase2','Sketch006','Constraint60')
+App.getDocument('RoundBase2').getObject('Sketch006').setDatum(59,App.Units.Quantity('6.500000 mm'))
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch006')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.Sketch006.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Edge191',16.75,3.70154,9)
+### Begin command Std_Delete
+App.getDocument('RoundBase2').getObject('Body').removeObject(App.getDocument('RoundBase2').getObject('Pocket006'))
+App.getDocument('RoundBase2').removeObject('Pocket006')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_Undo',0)
+# Gui.runCommand('Std_CloseActiveWindow',0)
+App.closeDocument("RoundBase2")
+# Gui.runCommand('Std_CloseActiveWindow',0)
+App.closeDocument("RoundTable")
+# App.setActiveDocument("")
+# App.ActiveDocument=None
+# Gui.ActiveDocument=None
+# MRU="1"
+# with open('C:/Program Files/FreeCAD 0.21/data/Mod/Start/StartPage/LoadMRU.py') as file:
+# 	exec(file.read())
+# App.setActiveDocument("RoundBase2")
+# App.ActiveDocument=App.getDocument("RoundBase2")
+# Gui.ActiveDocument=Gui.getDocument("RoundBase2")
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Vertex123',16.75,5.85,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance','',5.83175,5.94983,31.6029)
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Vertex125',-5.85,-5.85,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance')
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Face83',-9.4455,3.0353,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance')
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Face83',-9.62066,-0.000751383,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance')
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_MeasureDistance',0)
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Edge195',-8.64326,-1.16877,9)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Distance')
+### Begin command Std_Delete
+App.getDocument('RoundBase2').removeObject('Distance')
+App.getDocument('RoundBase2').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Face79',9.75014,5.85,5.20248)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket006.Face12',-2.25105,5.36966,3.0245)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket001.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pocket001'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket002.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pocket002'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket002.Sketch004.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch004')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket002.Sketch004.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch004')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch004')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket002.Sketch004.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket001.Sketch003.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch003')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket001.Sketch003.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch003')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch003')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket001.Sketch003.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket001.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pocket001'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket.Sketch002.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch002')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket.Sketch002.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch002')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch002')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket.Sketch002.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pocket'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad001.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pad001'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pad.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pad'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+App.getDocument("RoundBase2").save()
+### End command Std_Save
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket004.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.')
+# Gui.ActiveDocument.setEdit(App.getDocument('RoundBase2').getObject('Pocket005'), 0)
+# Gui.Selection.clearSelection()
+App.getDocument('RoundBase2').recompute()
+# Gui.getDocument('RoundBase2').resetEdit()
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.Sketch008.')
+# Gui.Selection.clearSelection()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('RoundBase2').getObject('Body'), 'Pocket005.Sketch008.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.getDocument('RoundBase2').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('RoundBase2').getObject('Sketch008')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('RoundBase2','Body','Pocket005.Sketch008.')
+App.getDocument('RoundBase2').recompute()
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('RoundBase2','Body')
+### Begin command Std_Export
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("RoundBase2").getObject("Body"))
+import Mesh
+if hasattr(Mesh, "exportOptions"):
+    options = Mesh.exportOptions(u"C:/Users/ypsit/source/FreeCAD/Robot/RoundBase2-Body.stl")
+    Mesh.export(__objs__, u"C:/Users/ypsit/source/FreeCAD/Robot/RoundBase2-Body.stl", options)
+else:
+    Mesh.export(__objs__, u"C:/Users/ypsit/source/FreeCAD/Robot/RoundBase2-Body.stl")
+
+del __objs__
+### End command Std_Export
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Std_CloseActiveWindow',0)
+App.closeDocument("RoundBase2")
+# App.setActiveDocument("")
+# App.ActiveDocument=None
+# Gui.ActiveDocument=None
+# with open('C:/Program Files/FreeCAD 0.21/data/Mod/Start/StartPage/LoadNew.py') as file:
+# 	exec(file.read())
+App.newDocument()
+# App.setActiveDocument("Unnamed")
+# App.ActiveDocument=App.getDocument("Unnamed")
+# Gui.ActiveDocument=Gui.getDocument("Unnamed")
+# Gui.activeDocument().activeView().viewDefaultOrientation()
+# Gui.ActiveDocument.ActiveView.setAxisCross(True)
+### Begin command PartDesign_NewSketch
+App.getDocument('Unnamed').addObject('PartDesign::Body','Body')
+# Gui.getDocument('Unnamed').ActiveView.setActiveObject('pdbody',App.getDocument('Unnamed').getObject('Body'),'')
+### End command PartDesign_NewSketch
+# Gui.Selection.addSelection('Unnamed','Body','Origin.XY_Plane.')
+App.getDocument('Unnamed').getObject('Body').newObject('Sketcher::SketchObject','Sketch')
+App.getDocument('Unnamed').getObject('Sketch').Support = (App.getDocument('Unnamed').getObject('XY_Plane'),[''])
+App.getDocument('Unnamed').getObject('Sketch').MapMode = 'FlatFace'
+App.ActiveDocument.recompute()
+# Gui.getDocument('Unnamed').setEdit(App.getDocument('Unnamed').getObject('Body'), 0, 'Sketch.')
+# ActiveSketch = App.getDocument('Unnamed').getObject('Sketch')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('Unnamed').getObject('Body'), 'Sketch.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('Unnamed').getObject('Sketch')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.clearSelection()
+# Gui.runCommand('Sketcher_CompCreateCircle',0)
+App.getDocument('Unnamed').getObject('Sketch').addGeometry(Part.Circle(App.Vector(0.000000,-0.744048,0),App.Vector(0,0,1),23.351828),False)
+App.getDocument('Unnamed').getObject('Sketch').addConstraint(Sketcher.Constraint('PointOnObject',0,3,-2)) 
+# Gui.Selection.addSelection('Unnamed','Body','Sketch.Edge1',-18.892,-14.4699,0.008,False)
+### Begin command Sketcher_ConstrainDiameter
+App.getDocument('Unnamed').getObject('Sketch').addConstraint(Sketcher.Constraint('Diameter',0,46.703656))
+App.getDocument('Unnamed').getObject('Sketch').setDatum(1,App.Units.Quantity('10.000000 mm'))
+### End command Sketcher_ConstrainDiameter
+# Gui.Selection.clearSelection()
+### Begin command Std_Save
+# Gui.SendMsgToActiveView("Save")
+### End command Std_Save
+# Gui.getDocument('Unnamed').resetEdit()
+App.ActiveDocument.recompute()
+# ActiveSketch = App.getDocument('Unnamed').getObject('Sketch')
+# tv = ActiveSketch.ViewObject.TempoVis
+# if tv:
+#   tv.restore()
+# ActiveSketch.ViewObject.TempoVis = None
+# del(tv)
+# del(ActiveSketch)
+# 
+# Gui.Selection.addSelection('Unnamed','Body','Sketch.')
+App.getDocument('Unnamed').recompute()
+### Begin command PartDesign_Pad
+App.getDocument('Unnamed').getObject('Body').newObject('PartDesign::Pad','Pad')
+App.getDocument('Unnamed').getObject('Pad').Profile = App.getDocument('Unnamed').getObject('Sketch')
+App.getDocument('Unnamed').getObject('Pad').Length = 10
+App.ActiveDocument.recompute()
+App.getDocument('Unnamed').getObject('Pad').ReferenceAxis = (App.getDocument('Unnamed').getObject('Sketch'),['N_Axis'])
+App.getDocument('Unnamed').getObject('Sketch').Visibility = False
+App.ActiveDocument.recompute()
+# App.getDocument('Unnamed').getObject('Pad').ViewObject.ShapeColor=getattr(App.getDocument('Unnamed').getObject('Body').getLinkedObject(True).ViewObject,'ShapeColor',App.getDocument('Unnamed').getObject('Pad').ViewObject.ShapeColor)
+# App.getDocument('Unnamed').getObject('Pad').ViewObject.LineColor=getattr(App.getDocument('Unnamed').getObject('Body').getLinkedObject(True).ViewObject,'LineColor',App.getDocument('Unnamed').getObject('Pad').ViewObject.LineColor)
+# App.getDocument('Unnamed').getObject('Pad').ViewObject.PointColor=getattr(App.getDocument('Unnamed').getObject('Body').getLinkedObject(True).ViewObject,'PointColor',App.getDocument('Unnamed').getObject('Pad').ViewObject.PointColor)
+# App.getDocument('Unnamed').getObject('Pad').ViewObject.Transparency=getattr(App.getDocument('Unnamed').getObject('Body').getLinkedObject(True).ViewObject,'Transparency',App.getDocument('Unnamed').getObject('Pad').ViewObject.Transparency)
+# App.getDocument('Unnamed').getObject('Pad').ViewObject.DisplayMode=getattr(App.getDocument('Unnamed').getObject('Body').getLinkedObject(True).ViewObject,'DisplayMode',App.getDocument('Unnamed').getObject('Pad').ViewObject.DisplayMode)
+# Gui.getDocument('Unnamed').setEdit(App.getDocument('Unnamed').getObject('Body'), 0, 'Pad.')
+# Gui.Selection.clearSelection()
+### End command PartDesign_Pad
+# Gui.Selection.clearSelection()
+App.getDocument('Unnamed').getObject('Pad').Length = 10.000000
+App.getDocument('Unnamed').getObject('Pad').Length2 = 30.000000
+App.getDocument('Unnamed').getObject('Pad').TaperAngle = 0.000000
+App.getDocument('Unnamed').getObject('Pad').TaperAngle2 = 0.000000
+App.getDocument('Unnamed').getObject('Pad').UseCustomVector = 0
+App.getDocument('Unnamed').getObject('Pad').Direction = (0, 0, 1)
+App.getDocument('Unnamed').getObject('Pad').ReferenceAxis = (App.getDocument('Unnamed').getObject('Sketch'), ['N_Axis'])
+App.getDocument('Unnamed').getObject('Pad').AlongSketchNormal = 1
+App.getDocument('Unnamed').getObject('Pad').Type = 4
+App.getDocument('Unnamed').getObject('Pad').UpToFace = None
+App.getDocument('Unnamed').getObject('Pad').Reversed = 0
+App.getDocument('Unnamed').getObject('Pad').Midplane = 0
+App.getDocument('Unnamed').getObject('Pad').Offset = 0
+App.getDocument('Unnamed').recompute()
+# Gui.getDocument('Unnamed').resetEdit()
+App.getDocument('Unnamed').getObject('Sketch').Visibility = False
+# Gui.Selection.addSelection('Unnamed','Body','Pad.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('Unnamed','Body','Pad.')
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('Unnamed','Body','',2.87401,-4.82912,-0.425341)
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('Unnamed','Body','Pad.')
+### Begin command Std_Delete
+App.getDocument('Unnamed').getObject('Body').removeObject(App.getDocument('Unnamed').getObject('Pad'))
+App.getDocument('Unnamed').removeObject('Pad')
+App.getDocument('Unnamed').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.Selection.addSelection('Unnamed','Body','Sketch.')
+### Begin command Std_Delete
+App.getDocument('Unnamed').removeObject('Sketch')
+App.getDocument('Unnamed').recompute()
+### End command Std_Delete
+# Gui.Selection.clearSelection()
+# Gui.runCommand('PartDesign_NewSketch',0)
+# Gui.Selection.addSelection('Unnamed','Body','Origin.XY_Plane.')
+App.getDocument('Unnamed').getObject('Body').newObject('Sketcher::SketchObject','Sketch')
+App.getDocument('Unnamed').getObject('Sketch').Support = (App.getDocument('Unnamed').getObject('XY_Plane'),[''])
+App.getDocument('Unnamed').getObject('Sketch').MapMode = 'FlatFace'
+App.ActiveDocument.recompute()
+# Gui.getDocument('Unnamed').setEdit(App.getDocument('Unnamed').getObject('Body'), 0, 'Sketch.')
+# ActiveSketch = App.getDocument('Unnamed').getObject('Sketch')
+# tv = Show.TempoVis(App.ActiveDocument, tag= ActiveSketch.ViewObject.TypeId)
+# ActiveSketch.ViewObject.TempoVis = tv
+# if ActiveSketch.ViewObject.EditingWorkbench:
+#   tv.activateWorkbench(ActiveSketch.ViewObject.EditingWorkbench)
+# if ActiveSketch.ViewObject.HideDependent:
+#   tv.hide(tv.get_all_dependent(App.getDocument('Unnamed').getObject('Body'), 'Sketch.'))
+# if ActiveSketch.ViewObject.ShowSupport:
+#   tv.show([ref[0] for ref in ActiveSketch.Support if not ref[0].isDerivedFrom("PartDesign::Plane")])
+# if ActiveSketch.ViewObject.ShowLinks:
+#   tv.show([ref[0] for ref in ActiveSketch.ExternalGeometry])
+# tv.sketchClipPlane(ActiveSketch, ActiveSketch.ViewObject.SectionView)
+# tv.hide(ActiveSketch)
+# del(tv)
+# del(ActiveSketch)
+# 
+import PartDesignGui
+# ActiveSketch = App.getDocument('Unnamed').getObject('Sketch')
+# if ActiveSketch.ViewObject.RestoreCamera:
+#   ActiveSketch.ViewObject.TempoVis.saveCamera()
+#   if ActiveSketch.ViewObject.ForceOrtho:
+#     ActiveSketch.ViewObject.Document.ActiveView.setCameraType('Orthographic')
+# 
+# Gui.Selection.clearSelection()
